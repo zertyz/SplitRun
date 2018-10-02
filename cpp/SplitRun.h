@@ -1,5 +1,5 @@
-#ifndef HASHTABLESPIKES_SPLITRUN_H
-#define HASHTABLESPIKES_SPLITRUN_H
+#ifndef MUTUA_TESTUTILS_SPLITRUN_H
+#define MUTUA_TESTUTILS_SPLITRUN_H
 
 #include <exception>
 #include <vector>
@@ -73,4 +73,4 @@ namespace mutua::testutils {
     };
 }
 
-#endif //HASHTABLESPIKES_SPLITRUN_H
+#endif //MUTUA_TESTUTILS_SPLITRUN_H
