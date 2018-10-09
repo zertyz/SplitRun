@@ -1,6 +1,6 @@
 # Usage:
-#	TYPE="Debug";   rm -fr $TYPE; mkdir $TYPE; cd $TYPE; cmake -DCMAKE_BUILD_TYPE=$TYPE ..; make; ctest; cd ..; ls -l "$TYPE/tests/cpp/SplitRunSpikes"
-#	TYPE="Release"; rm -fr $TYPE; mkdir $TYPE; cd $TYPE; cmake -DCMAKE_BUILD_TYPE=$TYPE ..; make; ctest; cd ..; ls -l "$TYPE/tests/cpp/SplitRunSpikes"
+#	TYPE="Debug";   rm -fr $TYPE; mkdir $TYPE; cd $TYPE; cmake -G Ninja -DCMAKE_BUILD_TYPE=$TYPE ..; cmake --build .; ctest; cd ..; ls -l "$TYPE/tests/cpp/SplitRunSpikes"
+#	TYPE="Release"; rm -fr $TYPE; mkdir $TYPE; cd $TYPE; cmake -G Ninja -DCMAKE_BUILD_TYPE=$TYPE ..; cmake --build .; ctest; cd ..; ls -l "$TYPE/tests/cpp/SplitRunSpikes"
 
 cmake_minimum_required (VERSION 3.9)
 project (SplitRun VERSION 2018.10.09)
