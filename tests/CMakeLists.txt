@@ -20,7 +20,7 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 # SplitRun dependency
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
-foreach (_referencedLib SplitRun)
+foreach (_referencedLib CppUtils SplitRun)
 	set(_referencedLib_SOURCES "../../${_referencedLib}/cpp/")
 	message("    --> searching library '${_referencedLib}' in '~/.cmake/packages/${_referencedLib}' with headers in '${_referencedLib_SOURCES}'")
 	if (NOT TARGET ${_referencedLib})

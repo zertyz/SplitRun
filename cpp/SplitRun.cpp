@@ -6,6 +6,9 @@
 #include <vector>
 #include <algorithm>
 
+// from CppUtils:
+#include <BetterExceptions.h>
+
 #include "SplitRun.h"
 
 using namespace mutua::testutils;

@@ -10,22 +10,11 @@
 #include "../../cpp/SplitRun.h"
 using namespace mutua::testutils;
 
+// from CppUtils
+#include <BetterExceptions.h>
+
 
 void splitRunExperiments() {
-
-    cout << endl << endl;
-    cout << "SplitRun Experiments:" << endl;
-    cout << "==================== " << endl << endl;
-
-    try {
-        throw std::overflow_error("My Artificial Exception");
-    } catch (std::exception const& e) {
-        DUMP_EXCEPTION(e, "Try block aborted due to purposely thrown exception, properly caught in the catch block (since you're seeing this message)",
-                       "what",   "this",
-                       "when",   "Was",
-                       "action", "Expressed");
-    }
-    DUMP_EXCEPTION(std::overflow_error("My Forced Exception"), "Just a dump of a created Exception, in order for us to see the quality of the debugging output");
 
     class SplitRunSleepExperiment: public SplitRun {
     public:
@@ -61,7 +50,7 @@ void splitRunExperiments() {
                 cout << "Instance #" << taskArgument << " is about to throw in " << (t-i) << " seconds..." << endl << flush;
                 this_thread::sleep_for(chrono::seconds(1));
             }
-            throw std::overflow_error("Task " + to_string(taskArgument) + " deliberately died");
+            THROW_EXCEPTION(std::overflow_error, "Task " + to_string(taskArgument) + " deliberately died");
         }
     };
 

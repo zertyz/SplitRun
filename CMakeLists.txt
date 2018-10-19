@@ -13,7 +13,7 @@ set(CMAKE_CXX_FLAGS    "${CMAKE_CXX_FLAGS} -march=native")	# binary is optimized
 ##########################
 # mutua libraries have the inclues inside the "cpp/" directory
 
-foreach (_referencedLib ) # no referenced libs on this project
+foreach (_referencedLib CppUtils)
   set(_referencedLib_SOURCES "../${_referencedLib}/cpp/")
   message("    --> including library '${_referencedLib}' with headers in '${_referencedLib_SOURCES}'")
   if (NOT TARGET ${_referencedLib})
