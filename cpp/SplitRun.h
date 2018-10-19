@@ -33,6 +33,7 @@ namespace mutua::testutils {
     public:
 
         SplitRun(int taskArgument);
+        //virtual ~SplitRun();
         static  void                                                 add(SplitRun& instance);
         static  std::tuple<std::vector<string>, std::vector<string>> runAndWaitForAll();
         virtual void                                                 splitRun() = 0;
